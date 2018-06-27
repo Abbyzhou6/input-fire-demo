@@ -1,0 +1,343 @@
+{
+  "id": "4000",
+  "name": "功能测试",
+  "status": "enable",
+  "varList": [
+    
+  ],
+  "nodeList": [
+    {
+      "id": "To_7004",
+      "type": "ToAgent",
+      "comment": "物流责任险",
+      "status": "1",
+      "data": {
+        "nextNode": "Exit",
+        "destNum": "7004",
+        "prompts": [
+          {
+            "type": "VOX",
+            "value": "api"
+          }
+        ],
+        "actions": [
+          
+        ]
+      },
+      "top": 1077,
+      "left": 1017
+    },
+    {
+      "id": "Start",
+      "type": "Root",
+      "comment": "开始",
+      "status": "1",
+      "data": {
+        "nextNode": "Announce"
+      },
+      "top": 36,
+      "left": 57
+    },
+    {
+      "id": "Menu1",
+      "type": "Menu",
+      "comment": "菜单选择",
+      "status": "1",
+      "data": {
+        "nextNode": "Exit",
+        "prompts": [
+          {
+            "type": "VOX",
+            "value": "api"
+          }
+        ],
+        "noinput": {
+          "timeout": "5",
+          "threshold": "5",
+          "nextNode": "Menu",
+          "prompt": {
+            "type": "VOX",
+            "value": "api"
+          }
+        },
+        "nomatch": {
+          "threshold": "5",
+          "nextNode": "Menu",
+          "prompt": {
+            "type": "VOX",
+            "value": "api"
+          }
+        },
+        "choices": [
+          {
+            "key": "1",
+            "nextNode": "To_7001"
+          },
+          {
+            "key": "2",
+            "nextNode": "To_7002"
+          },
+          {
+            "key": "3",
+            "nextNode": "To_7003"
+          },
+          {
+            "key": "4",
+            "nextNode": "To_7004"
+          },
+          {
+            "key": "5",
+            "nextNode": "To_7005"
+          },
+          {
+            "key": "6",
+            "nextNode": "To_7006"
+          }
+        ]
+      },
+      "top": 79,
+      "left": 435
+    },
+    {
+      "id": "To_7001",
+      "type": "ToAgent",
+      "comment": "App及个人业务",
+      "status": "1",
+      "data": {
+        "nextNode": "Exit",
+        "destNum": "7001",
+        "prompts": [
+          {
+            "type": "VOX",
+            "value": "api"
+          }
+        ],
+        "actions": [
+          
+        ]
+      },
+      "top": 1078,
+      "left": 629
+    },
+    {
+      "id": "To_7002",
+      "type": "ToAgent",
+      "comment": "收钱",
+      "status": "1",
+      "data": {
+        "nextNode": "Exit",
+        "destNum": "7002",
+        "prompts": [
+          {
+            "type": "VOX",
+            "value": "api"
+          }
+        ],
+        "actions": [
+          
+        ]
+      },
+      "top": 1077,
+      "left": 762
+    },
+    {
+      "id": "To_7003",
+      "type": "ToAgent",
+      "comment": "还钱",
+      "status": "1",
+      "data": {
+        "nextNode": "Exit",
+        "destNum": "7003",
+        "prompts": [
+          {
+            "type": "VOX",
+            "value": "api"
+          }
+        ],
+        "actions": [
+          
+        ]
+      },
+      "top": 1076,
+      "left": 890
+    },
+    {
+      "id": "Menu_2",
+      "type": "Menu",
+      "comment": "菜单选择",
+      "status": "1",
+      "data": {
+        "nextNode": "Exit",
+        "prompts": [
+          {
+            "type": "VOX",
+            "value": "api"
+          }
+        ],
+        "noinput": {
+          "timeout": "5",
+          "threshold": "5",
+          "nextNode": "Menu_2",
+          "prompt": {
+            "type": "VOX",
+            "value": "api"
+          }
+        },
+        "nomatch": {
+          "threshold": "5",
+          "nextNode": "",
+          "prompt": {
+            "type": "VOX",
+            "value": "api"
+          }
+        },
+        "choices": [
+          {
+            "key": "1",
+            "nextNode": "To_7001"
+          },
+          {
+            "key": "2",
+            "nextNode": "To_7002"
+          },
+          {
+            "key": "3",
+            "nextNode": "To_7003"
+          },
+          {
+            "key": "4",
+            "nextNode": "To_7004"
+          },
+          {
+            "key": "5",
+            "nextNode": "To_7005"
+          },
+          {
+            "key": "6",
+            "nextNode": "To_7006"
+          }
+        ]
+      },
+      "top": 576,
+      "left": 417
+    },
+    {
+      "id": "To_7005",
+      "type": "ToAgent",
+      "comment": "数码马上修",
+      "status": "1",
+      "data": {
+        "nextNode": "Exit",
+        "destNum": "7005",
+        "prompts": [
+          {
+            "type": "VOX",
+            "value": "api"
+          }
+        ],
+        "actions": [
+          
+        ]
+      },
+      "top": 1078,
+      "left": 1147
+    },
+    {
+      "id": "To_7006",
+      "type": "ToAgent",
+      "comment": "航危险",
+      "status": "1",
+      "data": {
+        "nextNode": "Exit",
+        "destNum": "7006",
+        "prompts": [
+          {
+            "type": "VOX",
+            "value": "api"
+          }
+        ],
+        "actions": [
+          
+        ]
+      },
+      "top": 1078,
+      "left": 1287
+    },
+    {
+      "id": "WorkTime_1",
+      "type": "WorkTime",
+      "comment": "周一到周五",
+      "status": "1",
+      "data": {
+        "weekDay": "1,2,3,4,5",
+        "workTime": "07:00~19:00",
+        "onWorkNode": "Menu1",
+        "offWorkNode": "WorkTime_2",
+        "mDays": [
+          {
+            "date": "",
+            "type": "onWork"
+          },
+          {
+            "date": "",
+            "type": "offWork"
+          }
+        ]
+      },
+      "top": 209,
+      "left": 44
+    },
+    {
+      "id": "WorkTime_2",
+      "type": "WorkTime",
+      "comment": "周六和周日",
+      "status": "1",
+      "data": {
+        "weekDay": "6,7",
+        "workTime": "10:00~17:00",
+        "onWorkNode": "Menu_2",
+        "offWorkNode": "Exit",
+        "mDays": [
+          {
+            "date": "",
+            "type": "onWork"
+          },
+          {
+            "date": "",
+            "type": "offWork"
+          }
+        ]
+      },
+      "top": 473,
+      "left": 31
+    },
+    {
+      "id": "Announce",
+      "type": "Announce",
+      "comment": "播放工作时间",
+      "status": "1",
+      "data": {
+        "nextNode": "WorkTime_1",
+        "prompts": [
+          {
+            "type": "TTS",
+            "value": "i云保客服周一至周五 工作时间为 9点至19整 节假日 工作时间为 10点至17点整"
+          }
+        ]
+      },
+      "top": 70,
+      "left": 237
+    },
+    {
+      "id": "Exit",
+      "type": "Exit",
+      "status": "1",
+      "comment": "结束",
+      "data": {
+        
+      },
+      "top": 1300,
+      "left": 153
+    }
+  ]
+}
